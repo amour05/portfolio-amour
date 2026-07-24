@@ -26,7 +26,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center gap-3" href="./">
-        <img src="./assets/images/logo.jpg" alt="Logo Amour Govoetchan" class="navbar-logo-img">
+        <img src="./assets/images/logo.jpg" alt="Logo Officiel Amour Govoetchan" class="navbar-logo-img">
         <div class="d-none d-sm-block text-start">
           <span class="d-block fw-bold text-white fs-6" style="letter-spacing:1px;">AMOUR GOVOETCHAN</span>
           <span class="d-block text-gold small" style="font-size:0.7rem; letter-spacing:1.5px;">DÉVELOPPEUR | DESIGNER | IA</span>
@@ -52,15 +52,17 @@
   <header class="hero-section text-center text-lg-start">
     <div class="container">
       <div class="row align-items-center g-5">
+        
+        <!-- Colonne Gauche : Présentation -->
         <div class="col-lg-7 animate__animated animate__fadeInLeft">
           <div class="hero-badge">
-            <i class="bi bi-shield-check"></i> Identité Officielle &amp; Portfolio
+            <i class="bi bi-patch-check-fill text-gold me-1"></i> Identité Officielle &amp; Portfolio
           </div>
           <h1 class="hero-title">
             Architecte Logiciel &amp; <span class="text-gold-gradient">Designer de Solutions Digitales</span>
           </h1>
           <p class="hero-lead">
-            Bonjour, je suis <strong class="text-white">Amour Govoetchan</strong>. Je conçois et développe des applications web/mobiles haute performance et déploie des stratégies marketing digitales à fort impact.
+            Bonjour, je suis <strong class="text-white">Amour Govoetchan</strong>. Je conçois et développe des applications web/mobiles sur-mesure et déploie des stratégies marketing digitales captivantes.
           </p>
           <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
             <a href="./projects/" class="btn btn-gold">
@@ -72,19 +74,49 @@
           </div>
         </div>
 
+        <!-- Colonne Droite : LOGO OFFICIEL MAGNIFIÉ -->
         <div class="col-lg-5 text-center animate__animated animate__zoomIn">
-          <div class="p-3 glass-card d-inline-block">
-            <img src="./assets/images/logo.jpg" alt="Logo Officiel AG Amour Govoetchan" class="hero-logo-img mb-3">
-            <div class="mt-2 text-gold fw-bold">Amour Govoetchan</div>
-            <div class="text-muted small">Développeur | Designer | IA</div>
+          <div class="official-logo-card">
+            <img src="./assets/images/logo.jpg" alt="Logo Officiel AG Amour Govoetchan" class="official-logo-img">
+          </div>
+          <div class="mt-3">
+            <span class="badge-gold">Architecte Logiciel</span>
+            <span class="badge-gold">Développeur Web &amp; Mobile</span>
+            <span class="badge-gold">Designer IA</span>
           </div>
         </div>
+
       </div>
     </div>
   </header>
 
-  <!-- Section Domaines d'Expertise -->
+  <!-- Section À Propos & Photo -->
   <section class="py-5 bg-darker">
+    <div class="container py-4">
+      <div class="row align-items-center g-5">
+        <div class="col-md-5 text-center animate__animated animate__fadeInLeft">
+          <div class="p-2 glass-card d-inline-block">
+            <img src="./assets/images/Amour.jpg" alt="Photo de Amour Govoetchan" class="img-fluid rounded-3" style="max-width: 290px; border: 2px solid var(--gold-primary);">
+          </div>
+        </div>
+        <div class="col-md-7 animate__animated animate__fadeInRight">
+          <h2 class="text-white fw-bold mb-3">À Propos d'<span class="text-gold-gradient">Amour Govoetchan</span></h2>
+          <p class="text-muted">
+            Diplômé en <strong>Systèmes Informatiques et Logiciels (SIL)</strong> à l'ISMT Saint Salomon, je cumule une solide expertise en ingénierie logicielle (Laravel, Flutter, React, PHP) et en <strong>Marketing Digital &amp; Community Management</strong>.
+          </p>
+          <p class="text-muted">
+            Mon objectif : créer des produits digitaux qui résolvent de vrais problèmes d'entreprise tout en offrant une expérience utilisateur (UI/UX) d'exception.
+          </p>
+          <a href="./about/" class="btn btn-outline-gold mt-2">
+            <i class="bi bi-person-badge-fill me-1"></i> En savoir plus sur mon profil
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Domaines d'Expertise -->
+  <section class="py-5">
     <div class="container py-4">
       <div class="section-header text-center animate__animated animate__fadeIn">
         <h2 class="text-white">Domaines d'<span class="text-gold-gradient">Expertise</span></h2>
@@ -95,12 +127,12 @@
       <div class="row g-4">
         <!-- Carte 1 -->
         <div class="col-md-4 animate__animated animate__fadeInUp">
-          <div class="glass-card p-4 text-center">
+          <div class="glass-card p-4 text-center h-100">
             <div class="social-icon-box mx-auto mb-3">
               <i class="bi bi-code-slash"></i>
             </div>
-            <h4 class="card-title">Développement Logiciel</h4>
-            <p class="card-text">
+            <h4 class="card-title mb-2">Développement Logiciel</h4>
+            <p class="card-text mb-3">
               Applications web et mobiles robustes (Laravel, Flutter, React, PHP). Architecture sécurisée, APIs et base de données.
             </p>
             <div>
@@ -113,12 +145,12 @@
 
         <!-- Carte 2 -->
         <div class="col-md-4 animate__animated animate__fadeInUp" style="animation-delay: 0.1s;">
-          <div class="glass-card p-4 text-center">
+          <div class="glass-card p-4 text-center h-100">
             <div class="social-icon-box mx-auto mb-3">
               <i class="bi bi-megaphone"></i>
             </div>
-            <h4 class="card-title">Marketing Digital</h4>
-            <p class="card-text">
+            <h4 class="card-title mb-2">Marketing Digital</h4>
+            <p class="card-text mb-3">
               Stratégie réseaux sociaux, branding, création de visuels engageants et community management pour propulser votre marque.
             </p>
             <div>
@@ -131,12 +163,12 @@
 
         <!-- Carte 3 -->
         <div class="col-md-4 animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
-          <div class="glass-card p-4 text-center">
+          <div class="glass-card p-4 text-center h-100">
             <div class="social-icon-box mx-auto mb-3">
               <i class="bi bi-cpu"></i>
             </div>
-            <h4 class="card-title">Design UI/UX &amp; IA</h4>
-            <p class="card-text">
+            <h4 class="card-title mb-2">Design UI/UX &amp; IA</h4>
+            <p class="card-text mb-3">
               Prototypage Figma, interfaces modernes centrées sur l'utilisateur et intégration des outils IA innovants.
             </p>
             <div>
@@ -151,7 +183,7 @@
   </section>
 
   <!-- CTA Section -->
-  <section class="py-5" style="background: radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.15) 0%, rgba(10, 14, 23, 1) 100%);">
+  <section class="py-5" style="background: radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.18) 0%, rgba(10, 14, 23, 1) 100%);">
     <div class="container text-center py-4">
       <h2 class="text-white fw-bold mb-3">Besoin d'un Développeur ou d'un Devis ?</h2>
       <p class="text-muted mx-auto mb-4" style="max-width: 620px;">
@@ -171,7 +203,7 @@
   <!-- Footer -->
   <footer class="footer-custom text-center">
     <div class="container d-flex flex-column align-items-center gap-3">
-      <img src="./assets/images/logo.jpg" alt="Logo Amour Govoetchan" class="footer-logo-img">
+      <img src="./assets/images/logo.jpg" alt="Logo Officiel Amour Govoetchan" class="footer-logo-img">
       <p class="mb-0 text-muted">© 2026 Amour Govoetchan - Tous droits réservés | Développeur • Designer • IA</p>
     </div>
   </footer>

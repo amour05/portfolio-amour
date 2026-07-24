@@ -9,17 +9,17 @@
   /* Charte Graphique Officielle du Logo */
   --gold-primary: #D4AF37;
   --gold-secondary: #E5C158;
-  --gold-light: #F5E6B3;
+  --gold-light: #F8EFD4;
   --gold-dark: #A88414;
-  --gold-gradient: linear-gradient(135deg, #F5E6B3 0%, #E5C158 40%, #D4AF37 70%, #997A15 100%);
-  --gold-glow: rgba(212, 175, 55, 0.3);
-  --gold-border: rgba(212, 175, 55, 0.35);
+  --gold-gradient: linear-gradient(135deg, #F8EFD4 0%, #E5C158 40%, #D4AF37 70%, #997A15 100%);
+  --gold-glow: rgba(212, 175, 55, 0.35);
+  --gold-border: rgba(212, 175, 55, 0.4);
 
   /* Fond Sombre Onyx Luxe */
   --bg-dark: #0A0E17;
   --bg-darker: #05080E;
-  --bg-card: rgba(15, 22, 35, 0.85);
-  --bg-card-hover: rgba(24, 34, 54, 0.95);
+  --bg-card: rgba(15, 22, 35, 0.9);
+  --bg-card-hover: rgba(24, 34, 54, 0.98);
 
   /* Couleurs de Textes */
   --text-main: #FFFFFF;
@@ -30,10 +30,10 @@
   --font-heading: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
   --font-body: 'Plus Jakarta Sans', sans-serif;
 
-  /* Transitiions & Ombres */
+  /* Transitions & Ombres */
   --transition-fast: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --radius-card: 16px;
-  --box-shadow-gold: 0 10px 30px -5px rgba(212, 175, 55, 0.25);
+  --box-shadow-gold: 0 12px 35px -5px rgba(212, 175, 55, 0.3);
 }
 
 /* --- Base --- */
@@ -60,7 +60,7 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .bg-gold {
@@ -69,46 +69,52 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
   font-weight: 700;
 }
 
-/* --- Logo Officiel Image Container --- */
+/* --- Logo Officiel Image Frame --- */
 .navbar-logo-img {
-  height: 46px;
+  height: 48px;
   width: auto;
   border-radius: 8px;
   border: 1.5px solid var(--gold-border);
   box-shadow: 0 0 15px var(--gold-glow);
-  transition: var(--transition-fast);
   background-color: #FFFFFF;
-  padding: 2px;
+  padding: 3px;
+  transition: var(--transition-fast);
 }
 
 .navbar-logo-img:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 25px rgba(212, 175, 55, 0.5);
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.6);
   border-color: var(--gold-secondary);
 }
 
-.hero-logo-img {
-  max-width: 280px;
-  width: 100%;
-  height: auto;
-  border-radius: 16px;
-  border: 2px solid var(--gold-primary);
-  box-shadow: 0 0 35px var(--gold-glow);
-  background-color: #FFFFFF;
-  padding: 12px;
+.official-logo-card {
+  background: #FFFFFF;
+  border: 3px solid var(--gold-primary);
+  border-radius: 20px;
+  padding: 16px;
+  box-shadow: 0 0 40px var(--gold-glow);
+  display: inline-block;
   transition: var(--transition-fast);
 }
 
-.hero-logo-img:hover {
-  transform: translateY(-5px) scale(1.02);
-  box-shadow: 0 0 50px rgba(212, 175, 55, 0.5);
+.official-logo-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 0 60px rgba(212, 175, 55, 0.6);
+}
+
+.official-logo-img {
+  max-width: 320px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
 }
 
 /* --- Navbar --- */
 .navbar-custom {
-  background-color: rgba(10, 14, 23, 0.9);
+  background-color: rgba(10, 14, 23, 0.95);
   backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--gold-border);
+  border-bottom: 1.5px solid var(--gold-border);
   padding: 14px 0;
   transition: var(--transition-fast);
 }
@@ -116,11 +122,11 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
 .navbar-custom.scrolled {
   padding: 10px 0;
   background-color: rgba(5, 8, 14, 0.98);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
 }
 
 .navbar-custom .nav-link {
-  color: #CBD5E1;
+  color: #E2E8F0;
   font-weight: 600;
   font-size: 0.95rem;
   padding: 8px 18px !important;
@@ -132,52 +138,52 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
 .navbar-custom .nav-link:hover,
 .navbar-custom .nav-link.active {
   color: var(--gold-secondary) !important;
-  background: rgba(212, 175, 55, 0.15);
+  background: rgba(212, 175, 55, 0.18);
   border: 1px solid var(--gold-border);
 }
 
 .navbar-toggler {
   border: 1.5px solid var(--gold-primary);
-  background: rgba(212, 175, 55, 0.1);
+  background: rgba(212, 175, 55, 0.15);
 }
 
 /* --- Hero Section --- */
 .hero-section {
-  min-height: 88vh;
+  min-height: 90vh;
   position: relative;
-  background: radial-gradient(circle at 50% 30%, rgba(212, 175, 55, 0.12) 0%, rgba(10, 14, 23, 1) 75%);
+  background: radial-gradient(circle at 50% 30%, rgba(212, 175, 55, 0.15) 0%, rgba(10, 14, 23, 1) 75%);
   display: flex;
   align-items: center;
-  padding-top: 110px;
-  padding-bottom: 70px;
+  padding-top: 120px;
+  padding-bottom: 75px;
 }
 
 .hero-badge {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  padding: 8px 20px;
-  background: rgba(212, 175, 55, 0.12);
+  padding: 8px 22px;
+  background: rgba(212, 175, 55, 0.15);
   border: 1.5px solid var(--gold-border);
   border-radius: 50px;
   color: var(--gold-secondary);
-  font-size: 0.9rem;
+  font-size: 0.92rem;
   font-weight: 700;
   margin-bottom: 24px;
 }
 
 .hero-title {
-  font-size: clamp(2.4rem, 4.8vw, 4rem);
+  font-size: clamp(2.5rem, 5vw, 4.2rem);
   font-weight: 800;
-  line-height: 1.18;
+  line-height: 1.15;
   margin-bottom: 20px;
 }
 
 .hero-lead {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   color: var(--text-muted);
   max-width: 650px;
-  margin-bottom: 32px;
+  margin-bottom: 35px;
 }
 
 /* --- Cartes Glassmorphism --- */
@@ -187,7 +193,7 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
   border: 1.5px solid var(--gold-border);
   border-radius: var(--radius-card);
   transition: var(--transition-fast);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.5);
 }
 
 .glass-card:hover {
@@ -212,66 +218,68 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
   color: #05080E !important;
   font-weight: 800;
   border: none;
-  padding: 13px 30px;
+  padding: 14px 32px;
   border-radius: 10px;
   box-shadow: 0 4px 20px var(--gold-glow);
   transition: var(--transition-fast);
   display: inline-flex;
   align-items: center;
   gap: 10px;
+  font-size: 1.02rem;
 }
 
 .btn-gold:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 30px rgba(212, 175, 55, 0.5);
+  box-shadow: 0 8px 32px rgba(212, 175, 55, 0.6);
   color: #000000 !important;
 }
 
 .btn-outline-gold {
-  background: rgba(212, 175, 55, 0.05);
+  background: rgba(212, 175, 55, 0.08);
   color: var(--gold-secondary) !important;
-  border: 1.5px solid var(--gold-primary);
+  border: 2px solid var(--gold-primary);
   font-weight: 700;
-  padding: 12px 28px;
+  padding: 13px 30px;
   border-radius: 10px;
   transition: var(--transition-fast);
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  font-size: 1.02rem;
 }
 
 .btn-outline-gold:hover {
-  background: rgba(212, 175, 55, 0.18);
+  background: rgba(212, 175, 55, 0.22);
   border-color: var(--gold-light);
   color: var(--gold-light) !important;
   transform: translateY(-3px);
-  box-shadow: 0 0 20px var(--gold-glow);
+  box-shadow: 0 0 25px var(--gold-glow);
 }
 
 /* --- Badges --- */
 .badge-gold {
-  background: rgba(212, 175, 55, 0.15);
+  background: rgba(212, 175, 55, 0.18);
   color: var(--gold-secondary);
-  border: 1px solid rgba(212, 175, 55, 0.3);
+  border: 1px solid rgba(212, 175, 55, 0.35);
   font-weight: 600;
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   padding: 6px 14px;
   border-radius: 6px;
-  margin-right: 5px;
+  margin-right: 6px;
   margin-bottom: 6px;
   display: inline-block;
 }
 
-/* --- Formulaire de Contact Prestige --- */
+/* --- Formulaire Contact --- */
 .form-label-custom {
   color: var(--gold-secondary);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 0.95rem;
   margin-bottom: 6px;
 }
 
 .form-control-custom {
-  background: rgba(5, 8, 14, 0.8);
+  background: rgba(5, 8, 14, 0.85);
   border: 1.5px solid var(--gold-border);
   color: #FFFFFF !important;
   border-radius: 10px;
@@ -287,11 +295,7 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
   outline: none;
 }
 
-.form-control-custom::placeholder {
-  color: #64748B;
-}
-
-/* --- Social Network Contact Badges --- */
+/* --- Social Network Items --- */
 .social-contact-item {
   background: var(--bg-card);
   border: 1.5px solid var(--gold-border);
@@ -313,10 +317,10 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
 }
 
 .social-icon-box {
-  width: 48px;
-  height: 48px;
+  width: 50px;
+  height: 50px;
   border-radius: 10px;
-  background: rgba(212, 175, 55, 0.12);
+  background: rgba(212, 175, 55, 0.15);
   border: 1px solid var(--gold-border);
   display: flex;
   align-items: center;
@@ -333,61 +337,27 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
 }
 
 .section-divider {
-  width: 70px;
+  width: 75px;
   height: 4px;
   background: var(--gold-gradient);
   margin: 14px auto 0 auto;
   border-radius: 3px;
 }
 
-/* --- Timeline CV --- */
-.timeline-list {
-  position: relative;
-  padding-left: 32px;
-  list-style: none;
-}
-
-.timeline-list::before {
-  content: '';
-  position: absolute;
-  left: 10px;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: linear-gradient(to bottom, var(--gold-primary), transparent);
-}
-
-.timeline-item {
-  position: relative;
-  margin-bottom: 35px;
-}
-
-.timeline-item::before {
-  content: '';
-  position: absolute;
-  left: -27px;
-  top: 6px;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background: var(--gold-secondary);
-  box-shadow: 0 0 12px var(--gold-primary);
-}
-
 /* --- Footer --- */
 .footer-custom {
   background: var(--bg-darker);
-  border-top: 1px solid var(--gold-border);
+  border-top: 1.5px solid var(--gold-border);
   color: var(--text-muted);
-  padding: 36px 0;
+  padding: 38px 0;
   font-size: 0.92rem;
 }
 
 .footer-logo-img {
-  height: 40px;
+  height: 44px;
   width: auto;
-  border-radius: 6px;
+  border-radius: 8px;
   background: #FFFFFF;
-  padding: 2px;
-  border: 1px solid var(--gold-border);
+  padding: 3px;
+  border: 1.5px solid var(--gold-border);
 }
