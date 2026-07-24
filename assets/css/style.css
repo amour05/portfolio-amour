@@ -1,0 +1,415 @@
+/* ==========================================================================
+   PORTFOLIO AMOUR GOVOETCHAN - DESIGN SYSTEM OFFICIEL (OR & NOIR ONYX)
+   Identité Visuelle basée sur le logo officiel "AG"
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap');
+
+:root {
+  /* Charte Graphique Officielle */
+  --gold-primary: #D4AF37;
+  --gold-light: #F3E5AB;
+  --gold-dark: #AA820A;
+  --gold-gradient: linear-gradient(135deg, #E5C158 0%, #D4AF37 50%, #997A15 100%);
+  --gold-glow: rgba(212, 175, 55, 0.25);
+  --gold-border: rgba(212, 175, 55, 0.3);
+
+  /* Couleurs de Fond & Neutres */
+  --bg-dark: #0B0F17;
+  --bg-darker: #06090F;
+  --bg-card: rgba(17, 24, 39, 0.75);
+  --bg-card-hover: rgba(26, 36, 56, 0.85);
+
+  /* Typographie & Textes */
+  --text-main: #F8FAFC;
+  --text-muted: #94A3B8;
+  --text-gold: #E5C158;
+
+  /* Polices */
+  --font-heading: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+
+  /* Effets & Transitions */
+  --transition-fast: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --radius-card: 16px;
+  --box-shadow-gold: 0 10px 30px -10px rgba(212, 175, 55, 0.2);
+}
+
+/* --- Base & Reset --- */
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6, .navbar-brand {
+  font-family: var(--font-heading);
+}
+
+a {
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+/* --- Typographie & Textes Dorés --- */
+.text-gold {
+  color: var(--gold-primary) !important;
+}
+
+.text-gold-gradient {
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.bg-gold {
+  background: var(--gold-gradient) !important;
+  color: #0B0F17 !important;
+  font-weight: 600;
+}
+
+/* --- Logo "AG" Stylisé en CSS --- */
+.brand-logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-logo-icon {
+  width: 42px;
+  height: 42px;
+  background: var(--bg-darker);
+  border: 1.5px solid var(--gold-primary);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--gold-light);
+  box-shadow: 0 0 15px var(--gold-glow);
+  transition: var(--transition-fast);
+}
+
+.brand-logo-container:hover .brand-logo-icon {
+  transform: rotate(5deg) scale(1.05);
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
+}
+
+.brand-title {
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 1.15rem;
+  color: var(--text-main);
+}
+
+.brand-subtitle {
+  font-size: 0.72rem;
+  color: var(--gold-primary);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  display: block;
+  margin-top: -3px;
+}
+
+/* --- Navigation Navbar --- */
+.navbar-custom {
+  background-color: rgba(11, 15, 23, 0.85);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+  padding: 14px 0;
+  transition: var(--transition-fast);
+}
+
+.navbar-custom.scrolled {
+  padding: 10px 0;
+  background-color: rgba(6, 9, 15, 0.95);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-custom .nav-link {
+  color: var(--text-muted);
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 8px 16px !important;
+  border-radius: 8px;
+  margin: 0 2px;
+  transition: var(--transition-fast);
+}
+
+.navbar-custom .nav-link:hover,
+.navbar-custom .nav-link.active {
+  color: var(--gold-primary) !important;
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.navbar-toggler {
+  border: 1px solid var(--gold-border);
+  padding: 6px 10px;
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 10px var(--gold-glow);
+}
+
+/* --- En-tête / Hero Section --- */
+.hero-section {
+  min-height: 85vh;
+  position: relative;
+  background: radial-gradient(circle at 50% 20%, rgba(212, 175, 55, 0.08) 0%, rgba(11, 15, 23, 1) 70%);
+  display: flex;
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 60px;
+}
+
+.hero-logo-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 18px;
+  background: rgba(212, 175, 55, 0.08);
+  border: 1px solid var(--gold-border);
+  border-radius: 50px;
+  color: var(--gold-primary);
+  font-size: 0.88rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 5vw, 4.2rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+
+.hero-lead {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  max-width: 650px;
+  margin: 0 auto 32px auto;
+}
+
+/* --- Cartes Glassmorphism --- */
+.glass-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--gold-border);
+  border-radius: var(--radius-card);
+  transition: var(--transition-fast);
+  height: 100%;
+}
+
+.glass-card:hover {
+  transform: translateY(-8px);
+  background: var(--bg-card-hover);
+  border-color: var(--gold-primary);
+  box-shadow: var(--box-shadow-gold);
+}
+
+.card-title {
+  color: var(--text-main);
+  font-weight: 700;
+}
+
+.card-text {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* --- Boutons Sur-Mesure --- */
+.btn-gold {
+  background: var(--gold-gradient);
+  color: #0B0F17 !important;
+  font-weight: 700;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px var(--gold-glow);
+  transition: var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+  color: #000000 !important;
+}
+
+.btn-outline-gold {
+  background: transparent;
+  color: var(--gold-primary) !important;
+  border: 1.5px solid var(--gold-primary);
+  font-weight: 600;
+  padding: 11px 26px;
+  border-radius: 10px;
+  transition: var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-outline-gold:hover {
+  background: rgba(212, 175, 55, 0.12);
+  border-color: var(--gold-light);
+  color: var(--gold-light) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px var(--gold-glow);
+}
+
+/* --- Badges Dorés --- */
+.badge-gold {
+  background: rgba(212, 175, 55, 0.12);
+  color: var(--gold-primary);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  font-weight: 500;
+  font-size: 0.8rem;
+  padding: 5px 12px;
+  border-radius: 6px;
+  margin-right: 4px;
+  margin-bottom: 6px;
+  display: inline-block;
+}
+
+/* --- Photo de Profil Amour --- */
+.profile-img-container {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-img-container::before {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  border-radius: 20px;
+  background: var(--gold-gradient);
+  opacity: 0.5;
+  filter: blur(15px);
+  z-index: 0;
+}
+
+.profile-img {
+  position: relative;
+  z-index: 1;
+  border: 3px solid var(--gold-primary);
+  border-radius: 16px;
+  box-shadow: var(--box-shadow-gold);
+}
+
+/* --- Timeline de Formation / CV --- */
+.timeline-list {
+  position: relative;
+  padding-left: 30px;
+  list-style: none;
+}
+
+.timeline-list::before {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--gold-primary), transparent);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -25px;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--gold-primary);
+  box-shadow: 0 0 10px var(--gold-primary);
+}
+
+/* --- Section Headers --- */
+.section-header {
+  margin-bottom: 48px;
+}
+
+.section-header h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.section-divider {
+  width: 60px;
+  height: 3px;
+  background: var(--gold-gradient);
+  margin: 12px auto 0 auto;
+  border-radius: 2px;
+}
+
+/* --- Filter Buttons (Projects Page) --- */
+.btn-filter {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  color: var(--text-muted);
+  border-radius: 30px;
+  padding: 8px 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: var(--transition-fast);
+  margin: 4px;
+}
+
+.btn-filter:hover, .btn-filter.active {
+  background: var(--gold-gradient);
+  color: #0B0F17;
+  border-color: var(--gold-primary);
+  font-weight: 700;
+  box-shadow: 0 0 15px var(--gold-glow);
+}
+
+/* --- Form Controls (Contact Page) --- */
+.form-control-custom {
+  background: rgba(11, 15, 23, 0.6);
+  border: 1px solid var(--gold-border);
+  color: var(--text-main);
+  border-radius: 10px;
+  padding: 12px 16px;
+}
+
+.form-control-custom:focus {
+  background: rgba(17, 24, 39, 0.9);
+  border-color: var(--gold-primary);
+  box-shadow: 0 0 15px var(--gold-glow);
+  color: var(--text-main);
+}
+
+/* --- Footer --- */
+.footer-custom {
+  background: var(--bg-darker);
+  border-top: 1px solid rgba(212, 175, 55, 0.15);
+  color: var(--text-muted);
+  padding: 32px 0;
+  font-size: 0.9rem;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+  .hero-section {
+    padding-top: 110px;
+    text-align: center;
+  }
+  .navbar-custom .nav-link {
+    margin: 4px 0;
+  }
+}

@@ -1,0 +1,120 @@
+/**
+ * PORTFOLIO AMOUR GOVOETCHAN - JAVASCRIPT SYSTEM
+ * Interactive behavior, navbar active state, project filtering, contact handler.
+ */
+
+document.addEventListener("DOMContentLoaded", () => {
+  initNavbarScroll();
+  initActiveNavLink();
+  initProjectFilters();
+  initContactForm();
+  initCardAnimations();
+});
+
+/* 1. Navbar Scroll Effect */
+function initNavbarScroll() {
+  const navbar = document.querySelector(".navbar-custom");
+  if (!navbar) return;
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 40) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
+}
+
+/* 2. Highlight Active Page Link */
+function initActiveNavLink() {
+  const currentPath = window.location.pathname.toLowerCase();
+  const navLinks = document.querySelectorAll(".navbar-custom .nav-link");
+
+  navLinks.forEach(link => {
+    const href = link.getAttribute("href").toLowerCase();
+    
+    // Check match for root or subdirectories
+    if (href.endsWith("index.html") || href.endsWith("/")) {
+      const parentDir = href.replace("index.html", "").replace(/^\/+|\/+$/g, '');
+      if (parentDir && currentPath.includes(parentDir)) {
+        link.classList.add("active");
+      } else if (!parentDir && (currentPath.endsWith("/") || currentPath.endsWith("index.html"))) {
+        link.classList.add("active");
+      } else {
+        link.classList.remove("active");
+      }
+    }
+  });
+}
+
+/* 3. Filter Projects by Category */
+function initProjectFilters() {
+  const filterBtns = document.querySelectorAll(".btn-filter");
+  const projectCards = document.querySelectorAll(".project-card-col");
+
+  if (!filterBtns.length || !projectCards.length) return;
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      filterBtns.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+
+      const category = btn.getAttribute("data-filter");
+
+      projectCards.forEach(col => {
+        if (category === "all" || col.getAttribute("data-category") === category) {
+          col.style.display = "block";
+          col.classList.add("animate__animated", "animate__fadeInUp");
+        } else {
+          col.style.display = "none";
+        }
+      });
+    });
+  });
+}
+
+/* 4. Contact Form Handler (Direct WhatsApp / Email) */
+function initContactForm() {
+  const contactForm = document.getElementById("portfolioContactForm");
+  if (!contactForm) return;
+
+  contactForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById("contactName")?.value || "Visiteur";
+    const email = document.getElementById("contactEmail")?.value || "";
+    const subject = document.getElementById("contactSubject")?.value || "Demande de contact";
+    const message = document.getElementById("contactMessage")?.value || "";
+
+    // Build WhatsApp URL
+    const fullText = `Bonjour Amour,\n\nJe suis ${name} (${email}).\nSujet: ${subject}\n\n${message}`;
+    const whatsappUrl = `https://wa.me/2290165847856?text=${encodeURIComponent(fullText)}`;
+
+    // Open WhatsApp in new tab
+    window.open(whatsappUrl, "_blank");
+
+    // Success feedback UI
+    const feedback = document.getElementById("contactFeedback");
+    if (feedback) {
+      feedback.classList.remove("d-none");
+      feedback.innerHTML = `
+        <div class="alert alert-success bg-dark text-gold border-gold text-center mt-3">
+          <i class="bi bi-check-circle-fill me-2"></i> Redirection vers WhatsApp en cours... Merci pour votre message !
+        </div>
+      `;
+    }
+  });
+}
+
+/* 5. Hover & Pulse Animations */
+function initCardAnimations() {
+  const cards = document.querySelectorAll(".glass-card");
+  cards.forEach(card => {
+    card.addEventListener("mouseenter", () => {
+      card.style.transform = "translateY(-8px)";
+    });
+    card.addEventListener("mouseleave", () => {
+      card.style.transform = "translateY(0)";
+    });
+  });
+}

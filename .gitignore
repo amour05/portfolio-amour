@@ -1,0 +1,6 @@
+# Duplicate nested folder
+portfolio-amour-main/
+
+# OS files
+.DS_Store
+Thumbs.db
