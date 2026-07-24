@@ -147,7 +147,7 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
   background: rgba(212, 175, 55, 0.15);
 }
 
-/* --- Hero Section --- */
+/* --- Hero Section & Bannières --- */
 .hero-section {
   min-height: 88vh;
   position: relative;
@@ -156,6 +156,13 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
   align-items: center;
   padding-top: 120px;
   padding-bottom: 75px;
+}
+
+.hero-section-subpage {
+  padding-top: 130px;
+  padding-bottom: 50px;
+  background: radial-gradient(circle at 50% 25%, rgba(212, 175, 55, 0.16) 0%, rgba(10, 14, 23, 1) 85%);
+  border-bottom: 1.5px solid var(--gold-border);
 }
 
 .hero-badge {
