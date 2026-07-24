@@ -17,17 +17,17 @@
 </head>
 <body>
 
-  <!-- Navigation Navbar -->
+  <!-- Navigation Navbar (UNIFIÉE SUR TOUTES LES PAGES) -->
   <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
     <div class="container">
-      <a class="navbar-brand brand-logo-container" href="../">
-        <div class="brand-logo-icon">AG</div>
-        <div>
-          <span class="brand-title">AMOUR GOVOETCHAN</span>
-          <span class="brand-subtitle">DÉVELOPPEUR | DESIGNER | IA</span>
+      <a class="navbar-brand d-flex align-items-center gap-3" href="../">
+        <img src="../assets/images/logo.png" alt="Logo Officiel Amour Govoetchan" class="navbar-logo-img">
+        <div class="d-none d-sm-block text-start">
+          <span class="d-block fw-bold text-white fs-6" style="letter-spacing:1px;">AMOUR GOVOETCHAN</span>
+          <span class="d-block text-gold small" style="font-size:0.7rem; letter-spacing:1.5px;">DÉVELOPPEUR | DESIGNER | IA</span>
         </div>
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navMain">
@@ -57,8 +57,8 @@
     <div class="row g-4">
       <!-- 1. Langages de Programmation -->
       <div class="col-md-4 animate__animated animate__fadeInUp">
-        <div class="glass-card p-4 text-center">
-          <div class="brand-logo-icon mx-auto mb-3" style="width:50px; height:50px; font-size:1.3rem;">
+        <div class="glass-card p-4 text-center h-100">
+          <div class="social-icon-box mx-auto mb-3">
             <i class="bi bi-code-slash"></i>
           </div>
           <h4 class="card-title">Langages</h4>
@@ -74,8 +74,8 @@
 
       <!-- 2. Web & Mobile -->
       <div class="col-md-4 animate__animated animate__fadeInUp" style="animation-delay: 0.1s;">
-        <div class="glass-card p-4 text-center">
-          <div class="brand-logo-icon mx-auto mb-3" style="width:50px; height:50px; font-size:1.3rem;">
+        <div class="glass-card p-4 text-center h-100">
+          <div class="social-icon-box mx-auto mb-3">
             <i class="bi bi-phone"></i>
           </div>
           <h4 class="card-title">Web &amp; Mobile</h4>
@@ -91,8 +91,8 @@
 
       <!-- 3. Frameworks & CMS -->
       <div class="col-md-4 animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
-        <div class="glass-card p-4 text-center">
-          <div class="brand-logo-icon mx-auto mb-3" style="width:50px; height:50px; font-size:1.3rem;">
+        <div class="glass-card p-4 text-center h-100">
+          <div class="social-icon-box mx-auto mb-3">
             <i class="bi bi-layers"></i>
           </div>
           <h4 class="card-title">Frameworks &amp; CMS</h4>
@@ -108,8 +108,8 @@
 
       <!-- 4. Bases de Données -->
       <div class="col-md-4 animate__animated animate__fadeInUp">
-        <div class="glass-card p-4 text-center">
-          <div class="brand-logo-icon mx-auto mb-3" style="width:50px; height:50px; font-size:1.3rem;">
+        <div class="glass-card p-4 text-center h-100">
+          <div class="social-icon-box mx-auto mb-3">
             <i class="bi bi-database"></i>
           </div>
           <h4 class="card-title">Bases de Données</h4>
@@ -124,8 +124,8 @@
 
       <!-- 5. Outils & Environnements -->
       <div class="col-md-4 animate__animated animate__fadeInUp" style="animation-delay: 0.1s;">
-        <div class="glass-card p-4 text-center">
-          <div class="brand-logo-icon mx-auto mb-3" style="width:50px; height:50px; font-size:1.3rem;">
+        <div class="glass-card p-4 text-center h-100">
+          <div class="social-icon-box mx-auto mb-3">
             <i class="bi bi-tools"></i>
           </div>
           <h4 class="card-title">Outils &amp; IDE</h4>
@@ -141,8 +141,8 @@
 
       <!-- 6. Design & Marketing -->
       <div class="col-md-4 animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
-        <div class="glass-card p-4 text-center">
-          <div class="brand-logo-icon mx-auto mb-3" style="width:50px; height:50px; font-size:1.3rem;">
+        <div class="glass-card p-4 text-center h-100">
+          <div class="social-icon-box mx-auto mb-3">
             <i class="bi bi-palette"></i>
           </div>
           <h4 class="card-title">Graphisme &amp; Bureautique</h4>
@@ -160,8 +160,9 @@
 
   <!-- Footer -->
   <footer class="footer-custom text-center mt-5">
-    <div class="container">
-      <p class="mb-0">© 2026 Amour Govoetchan - Tous droits réservés | Identité Or &amp; Noir Onyx</p>
+    <div class="container d-flex flex-column align-items-center gap-3">
+      <img src="../assets/images/logo.png" alt="Logo Officiel Amour Govoetchan" class="footer-logo-img">
+      <p class="mb-0 text-muted">© 2026 Amour Govoetchan - Tous droits réservés | Développeur • Designer • IA</p>
     </div>
   </footer>
 
