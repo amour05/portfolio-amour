@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 450" width="500" height="450">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F8EFD4"/>
+      <stop offset="40%" stop-color="#E5C158"/>
+      <stop offset="70%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#AA820A"/>
+    </linearGradient>
+    <linearGradient id="silverGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#CBD5E1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background Card -->
+  <rect width="500" height="450" fill="#0A0E17" rx="24"/>
+  <rect x="2" y="2" width="496" height="446" fill="none" stroke="url(#goldGrad)" stroke-width="2" rx="22" stroke-opacity="0.4"/>
+
+  <!-- AG Monogram -->
+  <g font-family="'Space Grotesk', 'Plus Jakarta Sans', sans-serif" font-weight="700">
+    <text x="215" y="235" font-size="200" fill="url(#silverGrad)" fill-opacity="0.22" text-anchor="middle">A</text>
+    <text x="285" y="235" font-size="200" fill="url(#silverGrad)" fill-opacity="0.32" text-anchor="middle">G</text>
+  </g>
+
+  <!-- Divider Line -->
+  <line x1="120" y1="280" x2="380" y2="280" stroke="url(#goldGrad)" stroke-width="2" stroke-opacity="0.6"/>
+
+  <!-- Text AMOUR GOVOETCHAN -->
+  <text x="250" y="335" font-family="'Space Grotesk', sans-serif" font-size="25" font-weight="700" fill="url(#goldGrad)" text-anchor="middle" letter-spacing="5">AMOUR GOVOETCHAN</text>
+
+  <!-- Subtitle Développeur | Designer | IA -->
+  <text x="250" y="375" font-family="'Plus Jakarta Sans', sans-serif" font-size="15" font-weight="600" fill="#94A3B8" text-anchor="middle" letter-spacing="2.5">DÉVELOPPEUR | DESIGNER | IA</text>
+</svg>
