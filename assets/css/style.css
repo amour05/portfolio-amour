@@ -1,41 +1,42 @@
 /* ==========================================================================
-   PORTFOLIO AMOUR GOVOETCHAN - DESIGN SYSTEM OFFICIEL (OR & NOIR ONYX)
-   Identité Visuelle basée sur le logo officiel "AG"
+   PORTFOLIO AMOUR GOVOETCHAN - DESIGN SYSTEM PRESTIGE (OR & NOIR ONYX)
+   Identité Visuelle Officielle basée sur le Logo "AG"
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@500;600;700&display=swap');
 
 :root {
-  /* Charte Graphique Officielle */
+  /* Charte Graphique Officielle du Logo */
   --gold-primary: #D4AF37;
-  --gold-light: #F3E5AB;
-  --gold-dark: #AA820A;
-  --gold-gradient: linear-gradient(135deg, #E5C158 0%, #D4AF37 50%, #997A15 100%);
-  --gold-glow: rgba(212, 175, 55, 0.25);
-  --gold-border: rgba(212, 175, 55, 0.3);
+  --gold-secondary: #E5C158;
+  --gold-light: #F5E6B3;
+  --gold-dark: #A88414;
+  --gold-gradient: linear-gradient(135deg, #F5E6B3 0%, #E5C158 40%, #D4AF37 70%, #997A15 100%);
+  --gold-glow: rgba(212, 175, 55, 0.3);
+  --gold-border: rgba(212, 175, 55, 0.35);
 
-  /* Couleurs de Fond & Neutres */
-  --bg-dark: #0B0F17;
-  --bg-darker: #06090F;
-  --bg-card: rgba(17, 24, 39, 0.75);
-  --bg-card-hover: rgba(26, 36, 56, 0.85);
+  /* Fond Sombre Onyx Luxe */
+  --bg-dark: #0A0E17;
+  --bg-darker: #05080E;
+  --bg-card: rgba(15, 22, 35, 0.85);
+  --bg-card-hover: rgba(24, 34, 54, 0.95);
 
-  /* Typographie & Textes */
-  --text-main: #F8FAFC;
+  /* Couleurs de Textes */
+  --text-main: #FFFFFF;
   --text-muted: #94A3B8;
   --text-gold: #E5C158;
 
-  /* Polices */
+  /* Typographies */
   --font-heading: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
   --font-body: 'Plus Jakarta Sans', sans-serif;
 
-  /* Effets & Transitions */
+  /* Transitiions & Ombres */
   --transition-fast: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --radius-card: 16px;
-  --box-shadow-gold: 0 10px 30px -10px rgba(212, 175, 55, 0.2);
+  --box-shadow-gold: 0 10px 30px -5px rgba(212, 175, 55, 0.25);
 }
 
-/* --- Base & Reset --- */
+/* --- Base --- */
 body {
   font-family: var(--font-body);
   background-color: var(--bg-dark);
@@ -49,14 +50,9 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
   font-family: var(--font-heading);
 }
 
-a {
-  text-decoration: none;
-  transition: var(--transition-fast);
-}
-
-/* --- Typographie & Textes Dorés --- */
+/* --- Textes et Badges Dorés --- */
 .text-gold {
-  color: var(--gold-primary) !important;
+  color: var(--gold-secondary) !important;
 }
 
 .text-gold-gradient {
@@ -64,129 +60,116 @@ a {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
+  font-weight: 700;
 }
 
 .bg-gold {
   background: var(--gold-gradient) !important;
-  color: #0B0F17 !important;
-  font-weight: 600;
-}
-
-/* --- Logo "AG" Stylisé en CSS --- */
-.brand-logo-container {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.brand-logo-icon {
-  width: 42px;
-  height: 42px;
-  background: var(--bg-darker);
-  border: 1.5px solid var(--gold-primary);
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-heading);
+  color: #05080E !important;
   font-weight: 700;
-  font-size: 1.2rem;
-  color: var(--gold-light);
+}
+
+/* --- Logo Officiel Image Container --- */
+.navbar-logo-img {
+  height: 46px;
+  width: auto;
+  border-radius: 8px;
+  border: 1.5px solid var(--gold-border);
   box-shadow: 0 0 15px var(--gold-glow);
+  transition: var(--transition-fast);
+  background-color: #FFFFFF;
+  padding: 2px;
+}
+
+.navbar-logo-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.5);
+  border-color: var(--gold-secondary);
+}
+
+.hero-logo-img {
+  max-width: 280px;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  border: 2px solid var(--gold-primary);
+  box-shadow: 0 0 35px var(--gold-glow);
+  background-color: #FFFFFF;
+  padding: 12px;
   transition: var(--transition-fast);
 }
 
-.brand-logo-container:hover .brand-logo-icon {
-  transform: rotate(5deg) scale(1.05);
-  box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
+.hero-logo-img:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 0 50px rgba(212, 175, 55, 0.5);
 }
 
-.brand-title {
-  font-weight: 700;
-  letter-spacing: 1px;
-  font-size: 1.15rem;
-  color: var(--text-main);
-}
-
-.brand-subtitle {
-  font-size: 0.72rem;
-  color: var(--gold-primary);
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  display: block;
-  margin-top: -3px;
-}
-
-/* --- Navigation Navbar --- */
+/* --- Navbar --- */
 .navbar-custom {
-  background-color: rgba(11, 15, 23, 0.85);
-  backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+  background-color: rgba(10, 14, 23, 0.9);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--gold-border);
   padding: 14px 0;
   transition: var(--transition-fast);
 }
 
 .navbar-custom.scrolled {
   padding: 10px 0;
-  background-color: rgba(6, 9, 15, 0.95);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  background-color: rgba(5, 8, 14, 0.98);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
 }
 
 .navbar-custom .nav-link {
-  color: var(--text-muted);
-  font-weight: 500;
+  color: #CBD5E1;
+  font-weight: 600;
   font-size: 0.95rem;
-  padding: 8px 16px !important;
+  padding: 8px 18px !important;
   border-radius: 8px;
-  margin: 0 2px;
+  margin: 0 3px;
   transition: var(--transition-fast);
 }
 
 .navbar-custom .nav-link:hover,
 .navbar-custom .nav-link.active {
-  color: var(--gold-primary) !important;
-  background: rgba(212, 175, 55, 0.1);
-  border: 1px solid rgba(212, 175, 55, 0.2);
+  color: var(--gold-secondary) !important;
+  background: rgba(212, 175, 55, 0.15);
+  border: 1px solid var(--gold-border);
 }
 
 .navbar-toggler {
-  border: 1px solid var(--gold-border);
-  padding: 6px 10px;
+  border: 1.5px solid var(--gold-primary);
+  background: rgba(212, 175, 55, 0.1);
 }
 
-.navbar-toggler:focus {
-  box-shadow: 0 0 10px var(--gold-glow);
-}
-
-/* --- En-tête / Hero Section --- */
+/* --- Hero Section --- */
 .hero-section {
-  min-height: 85vh;
+  min-height: 88vh;
   position: relative;
-  background: radial-gradient(circle at 50% 20%, rgba(212, 175, 55, 0.08) 0%, rgba(11, 15, 23, 1) 70%);
+  background: radial-gradient(circle at 50% 30%, rgba(212, 175, 55, 0.12) 0%, rgba(10, 14, 23, 1) 75%);
   display: flex;
   align-items: center;
-  padding-top: 100px;
-  padding-bottom: 60px;
+  padding-top: 110px;
+  padding-bottom: 70px;
 }
 
-.hero-logo-badge {
+.hero-badge {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  padding: 8px 18px;
-  background: rgba(212, 175, 55, 0.08);
-  border: 1px solid var(--gold-border);
+  padding: 8px 20px;
+  background: rgba(212, 175, 55, 0.12);
+  border: 1.5px solid var(--gold-border);
   border-radius: 50px;
-  color: var(--gold-primary);
-  font-size: 0.88rem;
-  font-weight: 600;
+  color: var(--gold-secondary);
+  font-size: 0.9rem;
+  font-weight: 700;
   margin-bottom: 24px;
 }
 
 .hero-title {
-  font-size: clamp(2.5rem, 5vw, 4.2rem);
+  font-size: clamp(2.4rem, 4.8vw, 4rem);
   font-weight: 800;
-  line-height: 1.15;
+  line-height: 1.18;
   margin-bottom: 20px;
 }
 
@@ -194,17 +177,17 @@ a {
   font-size: 1.2rem;
   color: var(--text-muted);
   max-width: 650px;
-  margin: 0 auto 32px auto;
+  margin-bottom: 32px;
 }
 
 /* --- Cartes Glassmorphism --- */
 .glass-card {
   background: var(--bg-card);
-  backdrop-filter: blur(12px);
-  border: 1px solid var(--gold-border);
+  backdrop-filter: blur(16px);
+  border: 1.5px solid var(--gold-border);
   border-radius: var(--radius-card);
   transition: var(--transition-fast);
-  height: 100%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
 .glass-card:hover {
@@ -221,18 +204,17 @@ a {
 
 .card-text {
   color: var(--text-muted);
-  font-size: 0.95rem;
 }
 
-/* --- Boutons Sur-Mesure --- */
+/* --- Boutons Dorés --- */
 .btn-gold {
   background: var(--gold-gradient);
-  color: #0B0F17 !important;
-  font-weight: 700;
+  color: #05080E !important;
+  font-weight: 800;
   border: none;
-  padding: 12px 28px;
+  padding: 13px 30px;
   border-radius: 10px;
-  box-shadow: 0 4px 15px var(--gold-glow);
+  box-shadow: 0 4px 20px var(--gold-glow);
   transition: var(--transition-fast);
   display: inline-flex;
   align-items: center;
@@ -240,17 +222,17 @@ a {
 }
 
 .btn-gold:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(212, 175, 55, 0.5);
   color: #000000 !important;
 }
 
 .btn-outline-gold {
-  background: transparent;
-  color: var(--gold-primary) !important;
+  background: rgba(212, 175, 55, 0.05);
+  color: var(--gold-secondary) !important;
   border: 1.5px solid var(--gold-primary);
-  font-weight: 600;
-  padding: 11px 26px;
+  font-weight: 700;
+  padding: 12px 28px;
   border-radius: 10px;
   transition: var(--transition-fast);
   display: inline-flex;
@@ -259,56 +241,109 @@ a {
 }
 
 .btn-outline-gold:hover {
-  background: rgba(212, 175, 55, 0.12);
+  background: rgba(212, 175, 55, 0.18);
   border-color: var(--gold-light);
   color: var(--gold-light) !important;
-  transform: translateY(-2px);
-  box-shadow: 0 0 15px var(--gold-glow);
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px var(--gold-glow);
 }
 
-/* --- Badges Dorés --- */
+/* --- Badges --- */
 .badge-gold {
-  background: rgba(212, 175, 55, 0.12);
-  color: var(--gold-primary);
-  border: 1px solid rgba(212, 175, 55, 0.25);
-  font-weight: 500;
-  font-size: 0.8rem;
-  padding: 5px 12px;
+  background: rgba(212, 175, 55, 0.15);
+  color: var(--gold-secondary);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  font-weight: 600;
+  font-size: 0.82rem;
+  padding: 6px 14px;
   border-radius: 6px;
-  margin-right: 4px;
+  margin-right: 5px;
   margin-bottom: 6px;
   display: inline-block;
 }
 
-/* --- Photo de Profil Amour --- */
-.profile-img-container {
-  position: relative;
-  display: inline-block;
+/* --- Formulaire de Contact Prestige --- */
+.form-label-custom {
+  color: var(--gold-secondary);
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 6px;
 }
 
-.profile-img-container::before {
-  content: '';
-  position: absolute;
-  inset: -8px;
-  border-radius: 20px;
-  background: var(--gold-gradient);
-  opacity: 0.5;
-  filter: blur(15px);
-  z-index: 0;
+.form-control-custom {
+  background: rgba(5, 8, 14, 0.8);
+  border: 1.5px solid var(--gold-border);
+  color: #FFFFFF !important;
+  border-radius: 10px;
+  padding: 14px 18px;
+  font-size: 0.98rem;
+  transition: var(--transition-fast);
 }
 
-.profile-img {
-  position: relative;
-  z-index: 1;
-  border: 3px solid var(--gold-primary);
-  border-radius: 16px;
+.form-control-custom:focus {
+  background: rgba(15, 22, 35, 0.95);
+  border-color: var(--gold-primary);
+  box-shadow: 0 0 20px var(--gold-glow);
+  outline: none;
+}
+
+.form-control-custom::placeholder {
+  color: #64748B;
+}
+
+/* --- Social Network Contact Badges --- */
+.social-contact-item {
+  background: var(--bg-card);
+  border: 1.5px solid var(--gold-border);
+  border-radius: 12px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  transition: var(--transition-fast);
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.social-contact-item:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--gold-secondary);
+  transform: translateX(8px);
   box-shadow: var(--box-shadow-gold);
+  color: var(--gold-secondary);
 }
 
-/* --- Timeline de Formation / CV --- */
+.social-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: rgba(212, 175, 55, 0.12);
+  border: 1px solid var(--gold-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  color: var(--gold-secondary);
+  margin-right: 16px;
+  flex-shrink: 0;
+}
+
+/* --- Section Dividers --- */
+.section-header {
+  margin-bottom: 50px;
+}
+
+.section-divider {
+  width: 70px;
+  height: 4px;
+  background: var(--gold-gradient);
+  margin: 14px auto 0 auto;
+  border-radius: 3px;
+}
+
+/* --- Timeline CV --- */
 .timeline-list {
   position: relative;
-  padding-left: 30px;
+  padding-left: 32px;
   list-style: none;
 }
 
@@ -324,92 +359,35 @@ a {
 
 .timeline-item {
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
 }
 
 .timeline-item::before {
   content: '';
   position: absolute;
-  left: -25px;
-  top: 5px;
-  width: 12px;
-  height: 12px;
+  left: -27px;
+  top: 6px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
-  background: var(--gold-primary);
-  box-shadow: 0 0 10px var(--gold-primary);
-}
-
-/* --- Section Headers --- */
-.section-header {
-  margin-bottom: 48px;
-}
-
-.section-header h2 {
-  font-size: 2.2rem;
-  font-weight: 700;
-}
-
-.section-divider {
-  width: 60px;
-  height: 3px;
-  background: var(--gold-gradient);
-  margin: 12px auto 0 auto;
-  border-radius: 2px;
-}
-
-/* --- Filter Buttons (Projects Page) --- */
-.btn-filter {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(212, 175, 55, 0.2);
-  color: var(--text-muted);
-  border-radius: 30px;
-  padding: 8px 20px;
-  font-size: 0.9rem;
-  font-weight: 500;
-  transition: var(--transition-fast);
-  margin: 4px;
-}
-
-.btn-filter:hover, .btn-filter.active {
-  background: var(--gold-gradient);
-  color: #0B0F17;
-  border-color: var(--gold-primary);
-  font-weight: 700;
-  box-shadow: 0 0 15px var(--gold-glow);
-}
-
-/* --- Form Controls (Contact Page) --- */
-.form-control-custom {
-  background: rgba(11, 15, 23, 0.6);
-  border: 1px solid var(--gold-border);
-  color: var(--text-main);
-  border-radius: 10px;
-  padding: 12px 16px;
-}
-
-.form-control-custom:focus {
-  background: rgba(17, 24, 39, 0.9);
-  border-color: var(--gold-primary);
-  box-shadow: 0 0 15px var(--gold-glow);
-  color: var(--text-main);
+  background: var(--gold-secondary);
+  box-shadow: 0 0 12px var(--gold-primary);
 }
 
 /* --- Footer --- */
 .footer-custom {
   background: var(--bg-darker);
-  border-top: 1px solid rgba(212, 175, 55, 0.15);
+  border-top: 1px solid var(--gold-border);
   color: var(--text-muted);
-  padding: 32px 0;
-  font-size: 0.9rem;
+  padding: 36px 0;
+  font-size: 0.92rem;
 }
 
-/* --- Responsive Adjustments --- */
-@media (max-width: 768px) {
-  .hero-section {
-    padding-top: 110px;
-    text-align: center;
-  }
-  .navbar-custom .nav-link {
-    margin: 4px 0;
-  }
+.footer-logo-img {
+  height: 40px;
+  width: auto;
+  border-radius: 6px;
+  background: #FFFFFF;
+  padding: 2px;
+  border: 1px solid var(--gold-border);
 }
