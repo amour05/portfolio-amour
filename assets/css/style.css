@@ -16,10 +16,10 @@
   --gold-border: rgba(212, 175, 55, 0.4);
 
   /* Fond Sombre Onyx Luxe */
-  --bg-dark: #0A0E17;
-  --bg-darker: #05080E;
-  --bg-card: rgba(15, 22, 35, 0.9);
-  --bg-card-hover: rgba(24, 34, 54, 0.98);
+  --bg-dark: #121620;
+  --bg-darker: #0A0E17;
+  --bg-card: rgba(20, 26, 38, 0.92);
+  --bg-card-hover: rgba(30, 40, 58, 0.98);
 
   /* Couleurs de Textes */
   --text-main: #FFFFFF;
@@ -33,7 +33,7 @@
   /* Transitions & Ombres */
   --transition-fast: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --radius-card: 16px;
-  --box-shadow-gold: 0 12px 35px -5px rgba(212, 175, 55, 0.3);
+  --box-shadow-gold: 0 12px 35px -5px rgba(212, 175, 55, 0.35);
 }
 
 /* --- Base --- */
@@ -65,19 +65,17 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
 
 .bg-gold {
   background: var(--gold-gradient) !important;
-  color: #05080E !important;
+  color: #0A0E17 !important;
   font-weight: 700;
 }
 
 /* --- Logo Officiel Image Frame --- */
 .navbar-logo-img {
-  height: 48px;
+  height: 52px;
   width: auto;
-  border-radius: 8px;
+  border-radius: 10px;
   border: 1.5px solid var(--gold-border);
   box-shadow: 0 0 15px var(--gold-glow);
-  background-color: #FFFFFF;
-  padding: 3px;
   transition: var(--transition-fast);
 }
 
@@ -87,26 +85,28 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
   border-color: var(--gold-secondary);
 }
 
-.official-logo-card {
-  background: #FFFFFF;
+.hero-logo-showcase {
+  background: #262626;
   border: 3px solid var(--gold-primary);
-  border-radius: 20px;
-  padding: 16px;
-  box-shadow: 0 0 40px var(--gold-glow);
+  border-radius: 24px;
+  padding: 12px;
+  box-shadow: 0 0 50px var(--gold-glow);
   display: inline-block;
   transition: var(--transition-fast);
+  max-width: 380px;
+  width: 100%;
 }
 
-.official-logo-card:hover {
-  transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 0 60px rgba(212, 175, 55, 0.6);
+.hero-logo-showcase:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 0 70px rgba(212, 175, 55, 0.6);
+  border-color: var(--gold-light);
 }
 
-.official-logo-img {
-  max-width: 320px;
+.hero-logo-showcase img {
   width: 100%;
   height: auto;
-  border-radius: 12px;
+  border-radius: 16px;
   display: block;
 }
 
@@ -149,9 +149,9 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
 
 /* --- Hero Section --- */
 .hero-section {
-  min-height: 90vh;
+  min-height: 88vh;
   position: relative;
-  background: radial-gradient(circle at 50% 30%, rgba(212, 175, 55, 0.15) 0%, rgba(10, 14, 23, 1) 75%);
+  background: radial-gradient(circle at 50% 30%, rgba(212, 175, 55, 0.18) 0%, rgba(10, 14, 23, 1) 75%);
   display: flex;
   align-items: center;
   padding-top: 120px;
@@ -270,31 +270,6 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
   display: inline-block;
 }
 
-/* --- Formulaire Contact --- */
-.form-label-custom {
-  color: var(--gold-secondary);
-  font-weight: 700;
-  font-size: 0.95rem;
-  margin-bottom: 6px;
-}
-
-.form-control-custom {
-  background: rgba(5, 8, 14, 0.85);
-  border: 1.5px solid var(--gold-border);
-  color: #FFFFFF !important;
-  border-radius: 10px;
-  padding: 14px 18px;
-  font-size: 0.98rem;
-  transition: var(--transition-fast);
-}
-
-.form-control-custom:focus {
-  background: rgba(15, 22, 35, 0.95);
-  border-color: var(--gold-primary);
-  box-shadow: 0 0 20px var(--gold-glow);
-  outline: none;
-}
-
 /* --- Social Network Items --- */
 .social-contact-item {
   background: var(--bg-card);
@@ -354,10 +329,8 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
 }
 
 .footer-logo-img {
-  height: 44px;
+  height: 50px;
   width: auto;
   border-radius: 8px;
-  background: #FFFFFF;
-  padding: 3px;
   border: 1.5px solid var(--gold-border);
 }
