@@ -18,12 +18,12 @@
   /* Fond Sombre Onyx Luxe */
   --bg-dark: #121620;
   --bg-darker: #0A0E17;
-  --bg-card: rgba(20, 26, 38, 0.92);
+  --bg-card: rgba(20, 26, 38, 0.95);
   --bg-card-hover: rgba(30, 40, 58, 0.98);
 
-  /* Couleurs de Textes */
+  /* Couleurs de Textes Haute Lisibilité */
   --text-main: #FFFFFF;
-  --text-muted: #94A3B8;
+  --text-muted: #CBD5E1;
   --text-gold: #E5C158;
 
   /* Typographies */
@@ -41,13 +41,18 @@ body {
   font-family: var(--font-body);
   background-color: var(--bg-dark);
   color: var(--text-main);
-  line-height: 1.6;
+  line-height: 1.65;
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
 h1, h2, h3, h4, h5, h6, .navbar-brand {
   font-family: var(--font-heading);
+}
+
+p {
+  color: #E2E8F0;
+  font-size: 1.05rem;
 }
 
 /* --- Textes et Badges Dorés --- */
@@ -61,6 +66,10 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
   -webkit-text-fill-color: transparent;
   display: inline-block;
   font-weight: 800;
+}
+
+.text-muted {
+  color: #CBD5E1 !important;
 }
 
 .bg-gold {
@@ -126,7 +135,7 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
 }
 
 .navbar-custom .nav-link {
-  color: #E2E8F0;
+  color: #F1F5F9;
   font-weight: 600;
   font-size: 0.95rem;
   padding: 8px 18px !important;
@@ -188,7 +197,7 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
 
 .hero-lead {
   font-size: 1.25rem;
-  color: var(--text-muted);
+  color: #CBD5E1 !important;
   max-width: 650px;
   margin-bottom: 35px;
 }
@@ -216,7 +225,32 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
 }
 
 .card-text {
-  color: var(--text-muted);
+  color: #CBD5E1 !important;
+}
+
+/* --- Timeline CV --- */
+.timeline-list {
+  list-style: none;
+  padding-left: 20px;
+  border-left: 2px solid var(--gold-primary);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 30px;
+  padding-left: 20px;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -27px;
+  top: 4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--gold-secondary);
+  box-shadow: 0 0 10px var(--gold-glow);
 }
 
 /* --- Boutons Dorés --- */
@@ -313,6 +347,26 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
   flex-shrink: 0;
 }
 
+/* --- Form Controls --- */
+.form-label-custom {
+  color: #F1F5F9;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.form-control-custom {
+  background: rgba(10, 14, 23, 0.8) !important;
+  border: 1.5px solid var(--gold-border) !important;
+  color: #FFFFFF !important;
+  border-radius: 10px;
+  padding: 12px 16px;
+}
+
+.form-control-custom:focus {
+  border-color: var(--gold-primary) !important;
+  box-shadow: 0 0 15px var(--gold-glow) !important;
+}
+
 /* --- Section Dividers --- */
 .section-header {
   margin-bottom: 50px;
@@ -330,14 +384,7 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
 .footer-custom {
   background: var(--bg-darker);
   border-top: 1.5px solid var(--gold-border);
-  color: var(--text-muted);
-  padding: 38px 0;
-  font-size: 0.92rem;
-}
-
-.footer-logo-img {
-  height: 50px;
-  width: auto;
-  border-radius: 8px;
-  border: 1.5px solid var(--gold-border);
+  color: #CBD5E1;
+  padding: 28px 0;
+  font-size: 0.95rem;
 }
