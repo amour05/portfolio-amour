@@ -104,6 +104,7 @@ p {
   transition: var(--transition-fast);
   max-width: 380px;
   width: 100%;
+  position: relative;
 }
 
 .hero-logo-showcase:hover {
@@ -112,12 +113,53 @@ p {
   border-color: var(--gold-light);
 }
 
+.hero-logo-showcase img.hero-about-img {
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 16px;
+  display: block;
+}
+
 .hero-logo-showcase img {
   width: 100%;
   height: auto;
   border-radius: 16px;
   display: block;
 }
+
+/* Badge/Logo superposé en petit format sur la photo */
+.logo-overlay-badge {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  width: 75px;
+  height: 75px;
+  background: rgba(10, 14, 23, 0.88);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 2px solid var(--gold-primary);
+  border-radius: 16px;
+  padding: 6px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.85), 0 0 15px var(--gold-glow);
+  transition: var(--transition-fast);
+  z-index: 10;
+}
+
+.hero-logo-showcase:hover .logo-overlay-badge {
+  transform: scale(1.1) rotate(3deg);
+  border-color: var(--gold-secondary);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.95), 0 0 25px var(--gold-glow);
+}
+
+.logo-overlay-badge img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
 
 /* --- Navbar --- */
 .navbar-custom {
