@@ -27,22 +27,33 @@ function initNavbarScroll() {
 
 /* 2. Highlight Active Page Link */
 function initActiveNavLink() {
-  const currentPath = window.location.pathname.toLowerCase();
+  const currentPath = window.location.pathname.toLowerCase().replace(/\\/g, '/');
   const navLinks = document.querySelectorAll(".navbar-custom .nav-link");
 
+  const isAbout = currentPath.includes("/about");
+  const isSkills = currentPath.includes("/skills");
+  const isCv = currentPath.includes("/cv");
+  const isProjects = currentPath.includes("/projects");
+  const isContacts = currentPath.includes("/contacts");
+  const isHome = !isAbout && !isSkills && !isCv && !isProjects && !isContacts;
+
   navLinks.forEach(link => {
-    const href = link.getAttribute("href").toLowerCase();
-    
-    // Check match for root or subdirectories
-    if (href.endsWith("index.html") || href.endsWith("/")) {
-      const parentDir = href.replace("index.html", "").replace(/^\/+|\/+$/g, '');
-      if (parentDir && currentPath.includes(parentDir)) {
-        link.classList.add("active");
-      } else if (!parentDir && (currentPath.endsWith("/") || currentPath.endsWith("index.html"))) {
-        link.classList.add("active");
-      } else {
-        link.classList.remove("active");
-      }
+    const href = (link.getAttribute("href") || "").toLowerCase();
+
+    if (isHome && (href === "./" || href === "../" || href === "index.html" || href.endsWith("/portfolio-amour/") || href.endsWith("/portfolio-amour/index.html"))) {
+      link.classList.add("active");
+    } else if (isAbout && href.includes("about")) {
+      link.classList.add("active");
+    } else if (isSkills && href.includes("skills")) {
+      link.classList.add("active");
+    } else if (isCv && href.includes("cv")) {
+      link.classList.add("active");
+    } else if (isProjects && href.includes("projects")) {
+      link.classList.add("active");
+    } else if (isContacts && href.includes("contacts")) {
+      link.classList.add("active");
+    } else {
+      link.classList.remove("active");
     }
   });
 }
