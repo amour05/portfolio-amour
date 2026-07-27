@@ -62,6 +62,7 @@ function initActiveNavLink() {
 function initProjectFilters() {
   const filterBtns = document.querySelectorAll(".btn-filter");
   const projectCards = document.querySelectorAll(".project-card-col");
+  const sectionTitles = document.querySelectorAll(".project-section-title");
 
   if (!filterBtns.length || !projectCards.length) return;
 
@@ -71,6 +72,15 @@ function initProjectFilters() {
       btn.classList.add("active");
 
       const category = btn.getAttribute("data-filter");
+
+      sectionTitles.forEach(title => {
+        const secCat = title.getAttribute("data-section");
+        if (category === "all" || category === secCat) {
+          title.style.display = "block";
+        } else {
+          title.style.display = "none";
+        }
+      });
 
       projectCards.forEach(col => {
         if (category === "all" || col.getAttribute("data-category") === category) {

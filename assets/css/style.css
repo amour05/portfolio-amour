@@ -424,6 +424,36 @@ p {
   border-radius: 3px;
 }
 
+/* --- Filter Buttons --- */
+.btn-filter {
+  background: rgba(20, 26, 38, 0.85);
+  color: var(--text-muted);
+  border: 1.5px solid var(--gold-border);
+  border-radius: 50px;
+  padding: 10px 24px;
+  margin: 5px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: var(--transition-fast);
+  cursor: pointer;
+}
+
+.btn-filter:hover,
+.btn-filter.active {
+  background: rgba(212, 175, 55, 0.22);
+  color: var(--gold-secondary) !important;
+  border-color: var(--gold-primary);
+  box-shadow: 0 0 18px var(--gold-glow);
+  transform: translateY(-2px);
+}
+
+.project-section-title {
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+}
+
 /* --- Footer --- */
 .footer-custom {
   background: var(--bg-darker);
