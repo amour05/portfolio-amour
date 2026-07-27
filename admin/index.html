@@ -3,70 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard Administrateur - Amour Govoetchan</title>
-
-  <!-- SEO Metadata -->
+  <title>Dashboard Administrateur - Amour Govoetchan (En Commentaire)</title>
   <meta name="robots" content="noindex, nofollow">
-
-  <!-- CDNs -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <link href="../assets/css/style.css?v=5" rel="stylesheet">
-
-  <style>
-    .admin-card {
-      background: var(--bg-card);
-      border: 1.5px solid var(--gold-border);
-      border-radius: 16px;
-      padding: 24px;
-      margin-bottom: 24px;
-    }
-    .admin-table {
-      color: #F1F5F9;
-    }
-    .admin-table th {
-      color: var(--gold-secondary);
-      border-bottom: 2px solid var(--gold-border);
-      padding: 12px;
-    }
-    .admin-table td {
-      border-bottom: 1px solid rgba(212, 175, 55, 0.15);
-      padding: 14px 12px;
-      vertical-align: middle;
-    }
-    .stat-widget {
-      background: rgba(20, 26, 38, 0.9);
-      border: 1.5px solid var(--gold-border);
-      border-radius: 14px;
-      padding: 20px;
-      text-align: center;
-      transition: var(--transition-fast);
-    }
-    .stat-widget:hover {
-      border-color: var(--gold-primary);
-      box-shadow: 0 0 20px var(--gold-glow);
-    }
-    .stat-value {
-      font-size: 2.2rem;
-      font-weight: 800;
-      color: var(--gold-secondary);
-    }
-    .pin-overlay {
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(5, 8, 14, 0.96);
-      backdrop-filter: blur(20px);
-      z-index: 9999;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-  </style>
 </head>
-<body>
+<body style="background: #0A0E17;">
 
-  <!-- Lock Screen PIN Overlay -->
+  <!-- ======================================================================== -->
+  <!-- DASHBOARD ADMINISTRATEUR TEMPORAIREMENT MIS EN COMMENTAIRE (DÉSACTIVÉ)   -->
+  <!-- ======================================================================== -->
+  <!--
   <div id="pinOverlay" class="pin-overlay">
     <div class="glass-card p-5 text-center" style="max-width: 420px; width: 90%;">
       <div class="social-icon-box mx-auto mb-3">
@@ -74,7 +21,6 @@
       </div>
       <h3 class="text-gold fw-bold mb-2">Espace Administrateur</h3>
       <p class="text-muted small mb-4">Veuillez saisir votre code PIN d'accès (Par défaut: 2026)</p>
-      
       <div class="mb-4">
         <input type="password" id="pinInput" class="form-control text-center fs-4 tracking-widest text-gold bg-dark border-warning" placeholder="• • • •" maxlength="6" style="letter-spacing: 6px;">
       </div>
@@ -88,7 +34,6 @@
     </div>
   </div>
 
-  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center gap-3" href="../">
@@ -105,7 +50,6 @@
     </div>
   </nav>
 
-  <!-- Hero Header -->
   <header class="hero-section-subpage text-center">
     <div class="container animate__animated animate__fadeInDown">
       <h1 class="display-5 fw-bold text-gold-gradient mb-2">Tableau de Bord &amp; Administration</h1>
@@ -119,15 +63,12 @@
     </div>
   </header>
 
-  <!-- Main Content -->
   <main class="container py-5">
-
-    <!-- Stat Widgets -->
     <div class="row g-4 mb-5">
       <div class="col-md-3 col-6">
         <div class="stat-widget">
           <i class="bi bi-folder-fill text-gold fs-3"></i>
-          <div class="stat-value" id="statProjectsCount">5</div>
+          <div class="stat-value" id="statProjectsCount">3</div>
           <div class="text-white small fw-semibold">Projets Actifs</div>
         </div>
       </div>
@@ -153,258 +94,24 @@
         </div>
       </div>
     </div>
-
-    <!-- Admin Nav Tabs -->
-    <ul class="nav nav-tabs border-bottom-0 mb-4" id="adminTabs" role="tablist">
-      <li class="nav-item">
-        <button class="nav-link active text-gold fw-bold" id="projects-tab" data-bs-toggle="tab" data-bs-target="#projects-content">
-          <i class="bi bi-folder-plus me-1"></i> Gestion des Projets
-        </button>
-      </li>
-      <li class="nav-item">
-        <button class="nav-link text-gold fw-bold" id="skills-tab" data-bs-toggle="tab" data-bs-target="#skills-content">
-          <i class="bi bi-tools me-1"></i> Compétences
-        </button>
-      </li>
-      <li class="nav-item">
-        <button class="nav-link text-gold fw-bold" id="certif-tab" data-bs-toggle="tab" data-bs-target="#certif-content">
-          <i class="bi bi-award me-1"></i> Certifications
-        </button>
-      </li>
-      <li class="nav-item">
-        <button class="nav-link text-gold fw-bold" id="backup-tab" data-bs-toggle="tab" data-bs-target="#backup-content">
-          <i class="bi bi-download me-1"></i> Sauvegarde &amp; Export
-        </button>
-      </li>
-    </ul>
-
-    <!-- Tab Contents -->
-    <div class="tab-content" id="adminTabsContent">
-      
-      <!-- 1. GESTION DES PROJETS -->
-      <div class="tab-pane fade show active" id="projects-content">
-        <div class="admin-card">
-          <div class="d-flex justify-content-between align-items-center flex-wrap mb-4">
-            <h4 class="text-gold fw-bold mb-0"><i class="bi bi-list-stars me-2"></i> Liste des Projets du Portfolio</h4>
-            <button class="btn btn-gold btn-sm" data-bs-toggle="modal" data-bs-target="#addProjectModal">
-              <i class="bi bi-plus-lg me-1"></i> Ajouter un Projet
-            </button>
-          </div>
-
-          <div class="table-responsive">
-            <table class="table admin-table">
-              <thead>
-                <tr>
-                  <th>Titre du Projet</th>
-                  <th>Catégorie</th>
-                  <th>Technologies / Badges</th>
-                  <th>Lien Web</th>
-                  <th>Actions</th>
-                </tr>
-              </thead>
-              <tbody id="projectsTableBody">
-                <!-- Dynamically Populated -->
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-
-      <!-- 2. GESTION DES COMPÉTENCES -->
-      <div class="tab-pane fade" id="skills-content">
-        <div class="admin-card">
-          <div class="d-flex justify-content-between align-items-center flex-wrap mb-4">
-            <h4 class="text-gold fw-bold mb-0"><i class="bi bi-cpu me-2"></i> Gestion des Compétences</h4>
-            <button class="btn btn-gold btn-sm" onclick="alert('Ajout de compétence rapide disponible !')">
-              <i class="bi bi-plus-lg me-1"></i> Ajouter une Compétence
-            </button>
-          </div>
-          <p class="text-muted">Gérez vos langages, frameworks, outils d'IA, bases de données et logiciels de design.</p>
-          <div class="row g-3" id="skillsContainer">
-            <!-- Dynamically Populated -->
-          </div>
-        </div>
-      </div>
-
-      <!-- 3. GESTION DES CERTIFICATIONS -->
-      <div class="tab-pane fade" id="certif-content">
-        <div class="admin-card">
-          <div class="d-flex justify-content-between align-items-center flex-wrap mb-4">
-            <h4 class="text-gold fw-bold mb-0"><i class="bi bi-patch-check me-2"></i> Mes Certifications &amp; Diplômes Validés</h4>
-          </div>
-          <div class="row g-4" id="certifAdminContainer">
-            <!-- Dynamically Populated -->
-          </div>
-        </div>
-      </div>
-
-      <!-- 4. SAUVEGARDE & EXPORT -->
-      <div class="tab-pane fade" id="backup-content">
-        <div class="admin-card text-center p-5">
-          <i class="bi bi-cloud-arrow-down text-gold fs-1 mb-3"></i>
-          <h4 class="text-white fw-bold">Sauvegarder &amp; Exporter vos Données</h4>
-          <p class="text-muted max-w-600 mx-auto" style="max-width:600px;">
-            Téléchargez le fichier JSON complet contenant vos projets, compétences et certifications à jour pour votre hébergement.
-          </p>
-          <button onclick="exportDataJSON()" class="btn btn-gold btn-lg mt-3">
-            <i class="bi bi-download me-2"></i> Exporter portfolio_data.json
-          </button>
-        </div>
-      </div>
-
-    </div>
   </main>
+  -->
 
-  <!-- Modal : Ajouter un Projet -->
-  <div class="modal fade" id="addProjectModal" tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content glass-card border-warning text-white p-2">
-        <div class="modal-header border-bottom-0">
-          <h5 class="modal-title text-gold fw-bold"><i class="bi bi-plus-circle me-2"></i> Ajouter un Nouveau Projet</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-        </div>
-        <div class="modal-body">
-          <form id="projectForm" onsubmit="saveNewProject(event)">
-            <div class="mb-3">
-              <label class="form-label-custom">Titre du Projet</label>
-              <input type="text" id="projTitle" class="form-control bg-dark text-white border-secondary" required placeholder="ex: Nom de l'application">
-            </div>
-            <div class="mb-3">
-              <label class="form-label-custom">Catégorie</label>
-              <select id="projCategory" class="form-select bg-dark text-white border-secondary">
-                <option value="personal">🚀 Projet Personnel</option>
-                <option value="enterprise">💼 Entreprise &amp; Freelance</option>
-                <option value="design">🎨 Maquette &amp; Affiche Graphique</option>
-              </select>
-            </div>
-            <div class="mb-3">
-              <label class="form-label-custom">Description</label>
-              <textarea id="projDesc" class="form-control bg-dark text-white border-secondary" rows="3" required placeholder="Description détaillée du projet..."></textarea>
-            </div>
-            <div class="mb-3">
-              <label class="form-label-custom">Badges / Technologies (séparés par des virgules)</label>
-              <input type="text" id="projBadges" class="form-control bg-dark text-white border-secondary" placeholder="React, Vite, Vercel, Tailwind">
-            </div>
-            <div class="mb-3">
-              <label class="form-label-custom">Lien URL Démo / Site Web (optionnel)</label>
-              <input type="url" id="projUrl" class="form-control bg-dark text-white border-secondary" placeholder="https://...">
-            </div>
-            <button type="submit" class="btn btn-gold w-100 mt-3">
-              <i class="bi bi-check-circle-fill me-1"></i> Enregistrer le Projet
-            </button>
-          </form>
-        </div>
+  <!-- Page d'attente quand le dashboard est en commentaire -->
+  <div style="min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 20px;">
+    <div class="glass-card p-5" style="max-width: 520px; border: 1.5px solid var(--gold-border);">
+      <div class="social-icon-box mx-auto mb-3">
+        <i class="bi bi-code-slash text-gold fs-2"></i>
       </div>
+      <h3 class="text-gold fw-bold mb-3">Dashboard en Commentaire</h3>
+      <p class="text-muted mb-4">
+        Le tableau de bord d'administration a été placé temporairement sous forme de commentaires dans le code source HTML.
+      </p>
+      <a href="../" class="btn btn-gold btn-lg">
+        <i class="bi bi-arrow-left me-2"></i> Retourner au Portfolio
+      </a>
     </div>
   </div>
 
-  <footer class="footer-custom text-center py-4 mt-5">
-    <div class="container">
-      <p class="mb-0 text-muted">© 2026 Administration Amour GOVOETCHAN — Espace Développeur Sécurisé</p>
-    </div>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    // Initial Data State
-    let initialProjects = [
-      { id: 1, title: "FOOT Tips — Pronostics Football", category: "personal", badges: "React.js, Vite, APIs Football, Vercel", url: "https://foottips.vercel.app/", desc: "Plateforme web d'analyses et de pronostics de football en direct." },
-      { id: 2, title: "Portfolio Amour Govoetchan", category: "personal", badges: "HTML5/CSS3, JS ES6, Bootstrap 5, Domaine .com", url: "https://amour05.github.io/portfolio-amour/", desc: "Site portfolio officiel avec identité visuelle Or Chaud & Noir Onyx." },
-      { id: 3, title: "GCB SARL BENIN — Gravier Concassé", category: "enterprise", badges: "HTML5/CSS3/JS, GTM, SEO, Domaine .com", url: "https://gcbsarlbenin.com/", desc: "Plateforme web d'entreprise pour la société GCB SARL." },
-      { id: 4, title: "Paiement Scolarité Kkiapay", category: "enterprise", badges: "PHP, API Kkiapay, Mobile Money, MySQL", url: "", desc: "Recouvrement informatisé des frais scolaires avec Mobile Money & Cartes." },
-      { id: 5, title: "Novacom & AGCSPACE", category: "enterprise", badges: "WordPress, UI/UX, SEO, Freelance", url: "", desc: "Conception de sites vitrines sur-mesure pour agences de communication." }
-    ];
-
-    function unlockDashboard() {
-      const pin = document.getElementById('pinInput').value;
-      if (pin === '2026' || pin === '') {
-        document.getElementById('pinOverlay').style.display = 'none';
-        sessionStorage.setItem('admin_unlocked', 'true');
-        loadData();
-      } else {
-        document.getElementById('pinError').classList.remove('d-none');
-      }
-    }
-
-    function lockDashboard() {
-      sessionStorage.removeItem('admin_unlocked');
-      document.getElementById('pinOverlay').style.display = 'flex';
-    }
-
-    if (sessionStorage.getItem('admin_unlocked') === 'true') {
-      document.getElementById('pinOverlay').style.display = 'none';
-    }
-
-    function loadData() {
-      const savedProjects = JSON.parse(localStorage.getItem('portfolio_projects')) || initialProjects;
-      renderProjects(savedProjects);
-    }
-
-    function renderProjects(projects) {
-      const tbody = document.getElementById('projectsTableBody');
-      tbody.innerHTML = '';
-      document.getElementById('statProjectsCount').innerText = projects.length;
-
-      projects.forEach(p => {
-        const tr = document.createElement('tr');
-        const catBadge = p.category === 'personal' ? '<span class="badge bg-primary">Perso</span>' : (p.category === 'enterprise' ? '<span class="badge bg-warning text-dark">Entreprise</span>' : '<span class="badge bg-info">Design</span>');
-        const linkBtn = p.url ? `<a href="${p.url}" target="_blank" class="btn btn-outline-gold btn-sm"><i class="bi bi-box-arrow-up-right"></i></a>` : '<span class="text-muted">-</span>';
-
-        tr.innerHTML = `
-          <td class="fw-bold text-white">${p.title}</td>
-          <td>${catBadge}</td>
-          <td><small class="text-gold">${p.badges}</small></td>
-          <td>${linkBtn}</td>
-          <td>
-            <button onclick="deleteProject(${p.id})" class="btn btn-outline-danger btn-sm"><i class="bi bi-trash"></i></button>
-          </td>
-        `;
-        tbody.appendChild(tr);
-      });
-    }
-
-    function saveNewProject(e) {
-      e.preventDefault();
-      const title = document.getElementById('projTitle').value;
-      const category = document.getElementById('projCategory').value;
-      const desc = document.getElementById('projDesc').value;
-      const badges = document.getElementById('projBadges').value;
-      const url = document.getElementById('projUrl').value;
-
-      let projects = JSON.parse(localStorage.getItem('portfolio_projects')) || initialProjects;
-      const newProj = { id: Date.now(), title, category, desc, badges, url };
-      projects.push(newProj);
-
-      localStorage.setItem('portfolio_projects', JSON.stringify(projects));
-      renderProjects(projects);
-
-      const modalEl = document.getElementById('addProjectModal');
-      const modal = bootstrap.Modal.getInstance(modalEl);
-      modal.hide();
-      document.getElementById('projectForm').reset();
-    }
-
-    function deleteProject(id) {
-      if (confirm('Voulez-vous vraiment supprimer ce projet ?')) {
-        let projects = JSON.parse(localStorage.getItem('portfolio_projects')) || initialProjects;
-        projects = projects.filter(p => p.id !== id);
-        localStorage.setItem('portfolio_projects', JSON.stringify(projects));
-        renderProjects(projects);
-      }
-    }
-
-    function exportDataJSON() {
-      const projects = JSON.parse(localStorage.getItem('portfolio_projects')) || initialProjects;
-      const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(projects, null, 2));
-      const downloadAnchor = document.createElement('a');
-      downloadAnchor.setAttribute("href", dataStr);
-      downloadAnchor.setAttribute("download", "portfolio_data.json");
-      document.body.appendChild(downloadAnchor);
-      downloadAnchor.click();
-      downloadAnchor.remove();
-    }
-
-    document.addEventListener('DOMContentLoaded', loadData);
-  </script>
 </body>
 </html>
