@@ -1,6 +1,6 @@
 # 📝 Notes du Portfolio - Amour GOVOETCHAN
 
-Fichier de documentation et recapitulatif du portfolio officiel d'**Amour GOVOETCHAN**.
+Fichier de documentation et récapitulatif du portfolio officiel d'**Amour GOVOETCHAN**.
 
 ---
 
@@ -43,7 +43,7 @@ Fichier de documentation et recapitulatif du portfolio officiel d'**Amour GOVOET
   - **Technologies** : React.js, Vite, APIs Football Live, Vercel
 - **Portfolio Personnel Amour Govoetchan**
   - **URL** : [https://amour05.github.io/portfolio-amour/](https://amour05.github.io/portfolio-amour/)
-  - **Technologies** : HTML5, CSS3, JavaScript ES6, Bootstrap 5, Domaine .com
+  - **Technologies** : Design Noir Onyx, Blanc & Orange Ambré, HTML5, CSS3, JavaScript ES6, Bootstrap 5
 
 ### 💼 Projets en Entreprise & Freelance :
 - **GCB SARL BENIN — Gravier Concassé du Bénin**
@@ -56,7 +56,16 @@ Fichier de documentation et recapitulatif du portfolio officiel d'**Amour GOVOET
 
 ---
 
-## 📁 4. Dashboard Administrateur & Git
+## 🎨 4. Design System & Charte Visuelle
+- **Fond Principal** : Noir Onyx Sombre Luxe (`#0B0E14` / `#05070A`)
+- **Typographies & Textes** : Blanc Pur (`#FFFFFF`) pour les titres et Blanc Argenté (`#F1F5F9`) pour les textes explicatifs (Contraste maximal & lisibilité AAA).
+- **Couleur Secondaire & Accents** : Orange Pur Ambré Chaleureux (`#FFA500`, `#FF8C00`, `#FFD180` - sans reflet rouge).
+- **Composants** : Cartes glassmorphic épurées, bordures réactives et boutons à dégradé solaire chaleureux.
+
+---
+
+## 📁 5. Dashboard Administrateur & Git
 - **Dépôt GitHub** : `https://github.com/amour05/portfolio-amour.git` (Branche `main`)
+- **Dernier Commit** : `fa66b77` *(Refonte graphique & lisibilité maximale)*
 - **Dashboard d'Administration** : `/admin/index.html` *(Temporairement en commentaire dans le code HTML)*
 - **Code PIN d'accès par défaut** : `2026`
