@@ -1,6 +1,6 @@
 /**
  * PORTFOLIO AMOUR GOVOETCHAN - JAVASCRIPT SYSTEM
- * Interactive behavior, navbar active state, project filtering, contact handler.
+ * Dynamic Background Doodles, Interactive Navigation, Project Filters, Contact Handler.
  */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initProjectFilters();
   initContactForm();
   initCardAnimations();
+  initBackgroundDoodles();
 });
 
 /* 1. Navbar Scroll Effect */
@@ -107,20 +108,17 @@ function initContactForm() {
     const subject = document.getElementById("contactSubject")?.value || "Demande de contact";
     const message = document.getElementById("contactMessage")?.value || "";
 
-    // Build WhatsApp URL
     const fullText = `Bonjour Amour,\n\nJe suis ${name} (${email}).\nSujet: ${subject}\n\n${message}`;
     const whatsappUrl = `https://wa.me/2290165847856?text=${encodeURIComponent(fullText)}`;
 
-    // Open WhatsApp in new tab
     window.open(whatsappUrl, "_blank");
 
-    // Success feedback UI
     const feedback = document.getElementById("contactFeedback");
     if (feedback) {
       feedback.classList.remove("d-none");
       feedback.innerHTML = `
-        <div class="alert alert-success bg-dark text-gold border-gold text-center mt-3">
-          <i class="bi bi-check-circle-fill me-2"></i> Redirection vers WhatsApp en cours... Merci pour votre message !
+        <div class="alert alert-dark text-white border-orange text-center mt-3" style="border:1px solid #FF6B00;">
+          <i class="bi bi-check-circle-fill text-orange me-2"></i> Redirection vers WhatsApp en cours... Merci pour votre message !
         </div>
       `;
     }
@@ -138,4 +136,31 @@ function initCardAnimations() {
       card.style.transform = "translateY(0)";
     });
   });
+}
+
+/* 6. Dynamic Background Doodles & Icons Injection */
+function initBackgroundDoodles() {
+  if (document.querySelector(".bg-doodles-container")) return;
+
+  const container = document.createElement("div");
+  container.className = "bg-doodles-container";
+
+  const icons = [
+    { class: "bi bi-code-slash", isWhite: false },
+    { class: "bi bi-palette-fill", isWhite: true },
+    { class: "bi bi-cpu-fill", isWhite: false },
+    { class: "bi bi-phone-fill", isWhite: true },
+    { class: "bi bi-braces", isWhite: false },
+    { class: "bi bi-robot", isWhite: true },
+    { class: "bi bi-stars", isWhite: false },
+    { class: "bi bi-terminal-fill", isWhite: true }
+  ];
+
+  icons.forEach(item => {
+    const iconEl = document.createElement("i");
+    iconEl.className = `floating-doodle ${item.class} ${item.isWhite ? 'doodle-white' : ''}`;
+    container.appendChild(iconEl);
+  });
+
+  document.body.prepend(container);
 }
